@@ -19,6 +19,7 @@ return {
         -- Useful status updates for LSP.
         -- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
         { 'j-hui/fidget.nvim',       opts = {} },
+        'nvim-telescope/telescope.nvim',
     },
 
     config = function()
@@ -56,6 +57,7 @@ return {
 
                 map("K", vim.lsp.buf.hover, "Hover Documentation")
                 map("gD", vim.lsp.buf.declaration, "Goto Declaration")
+                map("gr", require('telescope.builtin').lsp_references, "Show References")
 
                 require("which-key").add({
                     { "<leader>lf", vim.lsp.buf.format,         desc = "Format buffer" },
