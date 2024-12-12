@@ -14,7 +14,7 @@ vim.keymap.set({ 'n' }, '<Space>x', '<cmd>source %<CR>', opts)
 -- vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
 -- save file
-vim.keymap.set({'n', 'i', 'v'}, '<C-s>', '<cmd> w <CR>', opts)
+vim.keymap.set({ 'n', 'i', 'v' }, '<C-s>', '<cmd> w <CR>', opts)
 
 -- quit file
 vim.keymap.set('n', '<C-q>', '<cmd> q <CR>', opts)
@@ -33,7 +33,7 @@ vim.keymap.set('n', 'N', 'Nzzzv')
 -- Buffers
 vim.keymap.set('n', ']b', ':bnext<CR>', opts)
 vim.keymap.set('n', '[b', ':bprevious<CR>', opts)
-vim.keymap.set('n', '<leader>c', ':bdelete!<CR>', { desc="Close buffer", noremap = true, silent = true, })
+vim.keymap.set('n', '<leader>c', ':bdelete!<CR>', { desc = "Close buffer", noremap = true, silent = true, })
 
 -- Navigate between splits
 vim.keymap.set('n', '<C-k>', ':wincmd k<CR>', opts)
@@ -51,6 +51,9 @@ vim.keymap.set('v', '>', '>gv', opts)
 
 -- Keep last yanked when pasting
 vim.keymap.set('v', 'p', '"_dP', opts)
+
+-- Select all
+vim.keymap.set("n", "<C-a>", "ggVG", opts)
 
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic message' })
