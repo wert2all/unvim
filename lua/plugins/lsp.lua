@@ -34,7 +34,7 @@ return {
             },
         })
         require("mason-lspconfig").setup({
-            ensure_installed = { "lua_ls" },
+            ensure_installed = require("core.ensure.lsp"),
             automatic_installation = true,
         })
         require('mason-lspconfig').setup_handlers({
