@@ -10,7 +10,9 @@ return {
                 mappings = true,
             },
             spec = {
-                { "<leader>g", icon = "", group = "Git" }
+                { "<leader>l", icon = "", desc = "LSP" },
+                { "<leader>g", icon = "", group = "Git" },
+                { "<leader>f", icon = "", group = "Files", }
             }
         },
     }
