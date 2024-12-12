@@ -23,3 +23,22 @@ Add the following line to your `.zshrc`:
 ```shell
 alias uvim="NVIM_APPNAME=\"unvim\" nvim"
 ```
+
+## Configuration
+
+### Adding languages
+
+Add treesitter parser to file `lua/languages/treesitter.lua` like: 
+
+```lua
+return {
+    "lua", "go"
+}
+```
+and add LSP server to file `lua/languages/lsp.lua` like: 
+
+```lua
+return {
+    "gopls"
+}
+```
